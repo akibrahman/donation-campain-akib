@@ -1,7 +1,8 @@
 import { Cell, Pie, PieChart } from "recharts";
+import logo from "/Logo.png";
 // import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 
-const Statistics = () => {
+const Chart = () => {
   const data = [
     { name: "Group A", value: 600 },
     { name: "Group B", value: 300 },
@@ -34,6 +35,16 @@ const Statistics = () => {
   };
   return (
     <div className="">
+      <nav className="w-[85%] mx-auto flex justify-between items-center pt-9">
+        <div className="">
+          <img className="w-56" src={logo} alt="" />
+        </div>
+        <div className="flex items-center gap-12 list-none">
+          <li className="text-[#0b0b0b] text-lg active">Home</li>
+          <li className="text-[#0b0b0b] text-lg">Donation</li>
+          <li className="text-[#0b0b0b] text-lg">Statistics</li>
+        </div>
+      </nav>
       <div className="flex items-center justify-center">
         <PieChart className="" width={400} height={400}>
           <Pie
@@ -69,4 +80,4 @@ const Statistics = () => {
   );
 };
 
-export default Statistics;
+export default Chart;
