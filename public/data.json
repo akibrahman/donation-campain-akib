@@ -1,0 +1,135 @@
+[
+  {
+    "id": "1",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Empower Education Today",
+    "category": "Education",
+    "category_bg": "#FFC3C5",
+    "card_bg": "#FFE3E4",
+    "text_button_bg": "#FF444A",
+    "description": "Your commitment to education donations is changing lives one classroom at a time. By providing essential resources, scholarships, and educational tools, you're empowering students to break free from the cycle of poverty. Together, we can ensure that every child, regardless of their background, has a chance to succeed academically and pursue their dreams, creating a brighter future for all.",
+    "price": "$49.99"
+  },
+  {
+    "id": "2",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Give Warmth Today",
+    "category": "Clothing",
+    "category_bg": "#D4ECC1",
+    "card_bg": "#EBF6E2",
+    "text_button_bg": "#79C23F",
+    "description": "Your clothing donations make a significant impact on the lives of those less fortunate. By giving gently used clothes, you provide warmth and dignity to individuals in need.",
+    "price": "$49.99"
+  },
+  {
+    "id": "3",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Healthcare Giving Back",
+    "category": "Health",
+    "category_bg": "#AEC8FF",
+    "card_bg": "#D9E5FF",
+    "text_button_bg": "#0052FF",
+    "description": "Join the movement to make a significant impact on global health. Your generous health donation helps bolster healthcare infrastructure, deliver essential medicines, and provide preventive care to vulnerable populations. Together, we can break barriers to access, reduce health disparities, and empower individuals to lead healthier, more fulfilling lives.",
+    "price": "$79.99"
+  },
+  {
+    "id": "4",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Nourishing the Hungry",
+    "category": "Food",
+    "category_bg": "#FDD2C4",
+    "card_bg": "#FEEAE3",
+    "text_button_bg": "#F87147",
+    "description": "Food donation is a simple yet profound way to make a meaningful impact on the lives of those less fortunate. It's a gesture of compassion that transcends boundaries and backgrounds. When we donate food, we share not only our resources but also our empathy. These acts of giving strengthen communities, bringing warmth and nourishment to those who need it most. Food donation drives and volunteer efforts are the heartbeats of our society, ensuring that no one is left behind in the struggle against hunger. Together, we can build a brighter, more inclusive future, one meal at a time.",
+    "price": "$29.99"
+  },
+  {
+    "id": "5",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Educate, Donate, Transform",
+    "category": "Education",
+    "category_bg": "#FFC3C5",
+    "card_bg": "#FFE3E4",
+    "text_button_bg": "#FF444A",
+    "description": "Your generous donation to our education fund paves the way for underserved students to access quality education. By providing resources, scholarships, and learning materials, you're enabling dreams to flourish and bright minds to thrive. Your support doesn't just fund education; it invests in a brighter, more equitable future where every child can reach their full potential.",
+    "price": "$39.99"
+  },
+  {
+    "id": "6",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Supporting Health Initiatives",
+    "category": "Health",
+    "category_bg": "#AEC8FF",
+    "card_bg": "#D9E5FF",
+    "text_button_bg": "#0052FF",
+    "description": "Your health donation is an investment in a brighter and healthier future. It enables us to conduct critical research, offer medical assistance to those facing adversity, and support initiatives that promote overall well-being. Your contribution today can lead to breakthroughs in healthcare, better disease prevention, and ultimately, a world where everyone has the opportunity to thrive.",
+    "price": "$299.99"
+  },
+  {
+    "id": "7",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Donate Clothing Now",
+    "category": "Clothing",
+    "category_bg": "#D4ECC1",
+    "card_bg": "#EBF6E2",
+    "text_button_bg": "#79C23F",
+    "description": "Donating your old clothes not only helps those in need but also reduces textile waste. It's a sustainable way to declutter your closet while making a positive environmental contribution.",
+    "price": "$59.99"
+  },
+  {
+    "id": "8",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Share Food Love",
+    "category": "Food",
+    "category_bg": "#FDD2C4",
+    "card_bg": "#FEEAE3",
+    "text_button_bg": "#F87147",
+    "description": "Food donation is a powerful act of empathy, bridging the gap between abundance and scarcity. Every meal donated carries the potential to transform a life. Whether it's non-perishable items, fresh produce, or hot meals, these contributions provide sustenance to the vulnerable. Moreover, food donations serve as a catalyst for social change, prompting discussions on food insecurity and inequality. Together, we can make a difference by supporting food banks, shelters, and community initiatives. In the spirit of unity and compassion, we can work towards a world where hunger is but a distant memory.",
+    "price": "$89.99"
+  },
+  {
+    "id": "9",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Share Your Clothes",
+    "category": "Clothing",
+    "category_bg": "#D4ECC1",
+    "card_bg": "#EBF6E2",
+    "text_button_bg": "#79C23F",
+    "description": "Join the movement of compassionate individuals who share your commitment to clothing donation. Your generosity fosters a sense of community and goodwill, creating a ripple effect of kindness.",
+    "price": "$69.99"
+  },
+  {
+    "id": "10",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Donate for Health",
+    "category": "Health",
+    "category_bg": "#AEC8FF",
+    "card_bg": "#D9E5FF",
+    "text_button_bg": "#0052FF",
+    "description": "Your contribution to health donation goes a long way in ensuring access to vital medical care and resources for those in need. By donating, you become a beacon of hope, enabling us to provide crucial treatments, vaccinations, and health education to underserved communities. Together, we can save lives, improve health outcomes, and create a brighter, healthier future for all.",
+    "price": "$199.99"
+  },
+
+  {
+    "id": "11",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Donate for Hunger",
+    "category": "Food",
+    "category_bg": "#FDD2C4",
+    "card_bg": "#FEEAE3",
+    "text_button_bg": "#F87147",
+    "description": "In a world where hunger persists as a pressing issue, food donation emerges as a beacon of hope. Generous individuals and organizations come together to contribute surplus food to those in need. These donations not only alleviate hunger but also reduce food waste, promoting sustainability. Through acts of kindness and compassion, we create a community of support, ensuring that no one goes to bed hungry. Food donation initiatives are not just about nourishing bodies; they nourish the spirit of giving, fostering a brighter future for all.",
+    "price": "$199.99"
+  },
+  {
+    "id": "12",
+    "picture": "https://i.ibb.co/tPz3tK9/Rectangle-4281.png",
+    "title": "Support Learning Access",
+    "category": "Education",
+    "category_bg": "#FFC3C5",
+    "card_bg": "#FFE3E4",
+    "text_button_bg": "#FF444A",
+    "description": "When you contribute to our education donation drive, you're unlocking a world of opportunities for disadvantaged students. Your gift helps bridge the educational gap, making it possible for young learners to access quality schooling, empowering them with knowledge and skills that can transform their lives and communities. Join us in building a future where education knows no boundaries.",
+    "price": "$39.99"
+  }
+]

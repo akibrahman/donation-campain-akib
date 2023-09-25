@@ -4,34 +4,69 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import DonationDetails from "./Components/DonationDetails/DonationDetails";
 import Donations from "./Components/Donations/Donations";
-import Root from "./Components/Root/Root";
+import ErrorPage from "./Components/ErrorPage/ErrorPage";
+// import Root from "./Components/Root/Root";
+import NavBar from "./Components/NavBar/NavBar";
 import Statistics from "./Components/Statistics/Statistics";
 import "./index.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root>,
-    children: [
-      {
-        path: "/",
-        element: <App></App>,
-      },
-      {
-        path: "/my-donations",
-        element: <Donations></Donations>,
-      },
-      {
-        path: "/my-statistics",
-        element: <Statistics></Statistics>,
-      },
-      {
-        path: "/donation-details",
-        element: <DonationDetails></DonationDetails>,
-      },
-    ],
+    loader: () => fetch("/data.json"),
+    element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
+  },
+  {
+    path: "/my-donations",
+    element: (
+      <>
+        <NavBar></NavBar>
+        <Donations></Donations>
+      </>
+    ),
+  },
+  {
+    path: "/my-statistics",
+    element: (
+      <>
+        <NavBar></NavBar>
+        <Statistics></Statistics>
+      </>
+    ),
+  },
+  {
+    path: "/donation-details",
+    element: (
+      <>
+        <NavBar></NavBar>
+        <DonationDetails></DonationDetails>
+      </>
+    ),
   },
 ]);
+// const router = createBrowserRouter([
+//   { path: "/", loader: () => fetch("/data.json"), element: <App></App> },
+//   {
+//     path: "/",
+//     element: <Root></Root>,
+//     errorElement: <ErrorPage></ErrorPage>,
+//     children: [
+//       {
+//         path: "/my-donations",
+//         element: <Donations></Donations>,
+//       },
+//       {
+//         path: "/my-statistics",
+//         element: <Statistics></Statistics>,
+//       },
+//       {
+//         path: "/donation-details",
+//         element: <DonationDetails></DonationDetails>,
+//       },
+//     ],
+//   },
+// ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

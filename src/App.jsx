@@ -1,17 +1,32 @@
+import { NavLink, useLoaderData } from "react-router-dom";
 import "./App.css";
-import {
-  default as img,
-  default as img2,
-  default as img3,
-  default as img4,
-} from "/HomePage.png";
+import logo from "/Logo.png";
 
 function App() {
+  const data = useLoaderData();
+  console.log(data);
   return (
     <div className="">
       {/* Main Banner with Navbar  */}
       <div className="bg-[url('https://i.ibb.co/tPz3tK9/Rectangle-4281.png')] bg-cover bg-center bg-no-repeat">
         <div className="bg-white bg-opacity-95">
+          <nav className="w-[85%] mx-auto flex justify-between items-center pt-9">
+            <div className="">
+              <img className="w-56" src={logo} alt="" />
+            </div>
+            <div className="flex items-center gap-12 list-none">
+              <NavLink to="/">
+                {" "}
+                <li className="text-[#0b0b0b] text-lg">Home</li>
+              </NavLink>
+              <NavLink to="/my-donations">
+                <li className="text-[#0b0b0b] text-lg">Donations</li>
+              </NavLink>
+              <NavLink to="/my-statistics">
+                <li className="text-[#0b0b0b] text-lg">Statistics</li>
+              </NavLink>
+            </div>
+          </nav>
           <div className="py-32">
             <p className="text-[#0b0b0b] text-center text-[42px] font-bold mb-10">
               I Grow By Helping People In Need
@@ -35,53 +50,38 @@ function App() {
       {/* Donation Cards */}
 
       <div className="w-[85%] mx-auto grid grid-cols-4 gap-6 my-[100px]">
-        <div className="bg-[#D9E5FF] rounded-lg">
-          <img src={img4} alt="" />
-          <div className="p-4">
-            <p className="px-2 py-1 bg-[#AEC8FF] text-[#0052FF] text-sm font-medium w-max rounded-md mb-3">
-              Health
-            </p>
-            <p className="text-[#0052FF] text-lg font-semibold">
-              Clean Water for children
-            </p>
+        {data.map((card) => (
+          <div
+            key={card.id}
+            className="rounded-md"
+            style={{ backgroundColor: card.card_bg }}
+          >
+            <img
+              className="rounded-md rounded-b-none"
+              src="https://i.ibb.co/tPz3tK9/Rectangle-4281.png"
+              alt=""
+            />
+            <div className="p-4">
+              <p
+                className={`px-2 py-1  text-[#fff] text-sm font-medium w-max rounded-md mb-3`}
+                style={{
+                  backgroundColor: card.category_bg,
+                  color: card.text_button_bg,
+                }}
+              >
+                {card.category}
+              </p>
+              <p
+                className={`text-lg font-semibold`}
+                style={{
+                  color: card.text_button_bg,
+                }}
+              >
+                {card.title}
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div className="bg-[#FFE3E4] rounded-lg">
-          <img src={img2} alt="" />
-          <div className="p-4">
-            <p className="px-2 py-1 bg-[#FFC3C5] text-[#FF444A] text-sm font-medium w-max rounded-md mb-3">
-              Education
-            </p>
-            <p className="text-[#FF444A] text-lg font-semibold">
-              Clean Water for children
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-[#EBF6E2] rounded-lg">
-          <img src={img} alt="" />
-          <div className="p-4">
-            <p className="px-2 py-1 bg-[#D4ECC1] text-[#79C23F] text-sm font-medium w-max rounded-md mb-3">
-              Clothing
-            </p>
-            <p className="text-[#79C23F] text-lg font-semibold">
-              Clean Water for children
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-[#FEEAE3] rounded-lg">
-          <img src={img3} alt="" />
-          <div className="p-4">
-            <p className="px-2 py-1 bg-[#FDD2C4] text-[#F87147] text-sm font-medium w-max rounded-md mb-3">
-              Food
-            </p>
-            <p className="text-[#F87147] text-lg font-semibold">
-              Clean Water for children
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
