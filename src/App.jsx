@@ -1,6 +1,6 @@
-import { NavLink, useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import "./App.css";
-import logo from "/Logo.png";
+import NavBar from "./Components/NavBar/NavBar";
 
 function App() {
   const navigate = useNavigate();
@@ -8,28 +8,13 @@ function App() {
     navigate(`/donation-details/${id}`);
   };
   const data = useLoaderData();
+
   return (
     <div className="">
       {/* Main Banner with Navbar  */}
       <div className="bg-[url('https://i.ibb.co/tPz3tK9/Rectangle-4281.png')] bg-cover bg-center bg-no-repeat">
         <div className="bg-white bg-opacity-95">
-          <nav className="w-[85%] mx-auto flex justify-between items-center pt-9">
-            <div className="">
-              <img className="w-56" src={logo} alt="" />
-            </div>
-            <div className="flex items-center gap-12 list-none">
-              <NavLink to="/">
-                {" "}
-                <li className="text-[#0b0b0b] text-lg">Home</li>
-              </NavLink>
-              <NavLink to="/my-donations">
-                <li className="text-[#0b0b0b] text-lg">Donations</li>
-              </NavLink>
-              <NavLink to="/my-statistics">
-                <li className="text-[#0b0b0b] text-lg">Statistics</li>
-              </NavLink>
-            </div>
-          </nav>
+          <NavBar></NavBar>
           <div className="py-32">
             <p className="text-[#0b0b0b] text-center text-[42px] font-bold mb-10">
               I Grow By Helping People In Need
