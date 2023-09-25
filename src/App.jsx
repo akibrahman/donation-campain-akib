@@ -1,10 +1,13 @@
-import { NavLink, useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData, useNavigate } from "react-router-dom";
 import "./App.css";
 import logo from "/Logo.png";
 
 function App() {
+  const navigate = useNavigate();
+  const showDetails = (id) => {
+    navigate(`/donation-details/${id}`);
+  };
   const data = useLoaderData();
-  console.log(data);
   return (
     <div className="">
       {/* Main Banner with Navbar  */}
@@ -52,8 +55,9 @@ function App() {
       <div className="w-[85%] mx-auto grid grid-cols-4 gap-6 my-[100px]">
         {data.map((card) => (
           <div
+            onClick={() => showDetails(card.id)}
             key={card.id}
-            className="rounded-md"
+            className="rounded-md cursor-pointer"
             style={{ backgroundColor: card.card_bg }}
           >
             <img
