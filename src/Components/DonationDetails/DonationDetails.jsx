@@ -2,13 +2,12 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { setLocalStoredObj } from "../../../public/LocalStorage";
-import img from "/DetailsPage.png";
 
 const DonationDetails = () => {
   const params = useParams();
   const data = useLoaderData();
   const target = data.find((item) => item.id === params.id);
-  const { id, title, description, text_button_bg, price } = target;
+  const { id, title, description, picture, text_button_bg, price } = target;
 
   const handleDonation = (id, price) => {
     const check = setLocalStoredObj(id);
@@ -24,22 +23,15 @@ const DonationDetails = () => {
   };
   return (
     <div>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+      <ToastContainer />
       <ToastContainer />
       <div className="w-[85%] mx-auto my-20">
         <div className="relative">
-          <img src={img} alt="" />
+          <img
+            className="w-full h-[300px] md:h-[400px] lg:h-[600px]"
+            src={picture}
+            alt=""
+          />
           <div className="absolute w-full h-[120px] bottom-0 bg-black opacity-50"></div>
           <button
             onClick={() => handleDonation(id, parseInt(price))}

@@ -8,18 +8,11 @@ const Statistics = () => {
   const myData = useLoaderData();
   const [storedArray, setStoredArray] = useState([]);
   useEffect(() => {
-    const localStoredData = [];
     const localObj = getLocalStoredObj();
-    for (const id of localObj) {
-      const target = myData.find((obj) => parseInt(obj.id) === parseInt(id));
-      if (target) {
-        localStoredData.push(target);
-      }
-    }
-    setStoredArray(localStoredData);
+    setStoredArray(localObj);
   }, [myData]);
-  const myDonation = storedArray.reduce((a, b) => a + parseInt(b.price), 0);
-  const totalDonation = myData.reduce((a, b) => a + parseInt(b.price), 0);
+  const totalDonation = myData.length;
+  const myDonation = storedArray.length;
 
   const data = [
     { name: "Group A", value: totalDonation },
@@ -53,7 +46,7 @@ const Statistics = () => {
   };
   return (
     <div className="">
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center w-1/2 mx-auto mt-10 md:mt-0">
         <PieChart className="" width={400} height={400}>
           <Pie
             data={data}
@@ -74,14 +67,14 @@ const Statistics = () => {
           </Pie>
         </PieChart>
       </div>
-      <div className="flex gap-10 justify-center mt-10">
-        <div className="flex items-center gap-5">
+      <div className="flex gap-5 md:gap-10 justify-center mt-10">
+        <div className="flex items-center gap-3 md:gap-5">
           <p className="text-[#0b0b0b] text-lg">Your Donation</p>
-          <span className="w-[100px] h-[10px] rounded bg-[#00C49F]"></span>
+          <span className="w-[50px] md:w-[100px] h-[10px] rounded bg-[#00C49F]"></span>
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-3 md:gap-5">
           <p className="text-[#0b0b0b] text-lg">Total Donation</p>
-          <span className="w-[100px] h-[10px] rounded bg-[#FF444A]"></span>
+          <span className="w-[50px] md:w-[100px] h-[10px] rounded bg-[#FF444A]"></span>
         </div>
       </div>
     </div>

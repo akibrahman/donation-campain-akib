@@ -47,13 +47,13 @@ function App() {
         <div className="bg-white bg-opacity-95">
           <NavBar></NavBar>
           <div className="py-32">
-            <p className="text-[#0b0b0b] text-center text-[42px] font-bold mb-10">
+            <p className="text-[#0b0b0b] text-center text-xl md:text-[42px] font-bold mb-10">
               I Grow By Helping People In Need
             </p>
             <div className="flex w-max mx-auto">
               <input
                 onChange={handleInput}
-                className="border border-r-0 rounded-lg rounded-e-none px-4 w-80 focus:outline-none"
+                className="border border-r-0 rounded-lg rounded-e-none px-4 w-60 md:w-80 focus:outline-none"
                 type="text"
                 placeholder="Search here..."
                 name=""
@@ -72,7 +72,7 @@ function App() {
 
       {/* Donation Cards */}
 
-      <div className="w-[85%] mx-auto grid grid-cols-4 gap-6 my-[100px]">
+      <div className="w-[85%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-[100px]">
         {displayData.map((card) => (
           <div
             onClick={() => showDetails(card.id)}
@@ -81,8 +81,8 @@ function App() {
             style={{ backgroundColor: card.card_bg }}
           >
             <img
-              className="rounded-md rounded-b-none"
-              src="https://i.ibb.co/tPz3tK9/Rectangle-4281.png"
+              className="rounded-md rounded-b-none h-[60%] w-full"
+              src={card.picture}
               alt=""
             />
             <div className="p-4">

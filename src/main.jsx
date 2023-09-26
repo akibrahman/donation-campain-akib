@@ -46,6 +46,7 @@ const router = createBrowserRouter([
         <DonationDetails></DonationDetails>
       </>
     ),
+    errorElement: <ErrorPage></ErrorPage>,
   },
 ]);
 // const router = createBrowserRouter([

@@ -45,7 +45,7 @@ const Donations = () => {
           No Donation
         </p>
       )}
-      <div className="w-[85%] mx-auto grid grid-cols-2 gap-6 mt-20 mb-10">
+      <div className="w-[85%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-20 mb-10">
         {displayDonations.map((i) => (
           <div
             key={i.id}
