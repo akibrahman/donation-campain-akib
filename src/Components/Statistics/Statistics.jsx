@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { Cell, Pie, PieChart } from "recharts";
+import { Cell, Pie, PieChart, Tooltip } from "recharts";
 import { getLocalStoredObj } from "../../../public/LocalStorage";
-// import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 
 const Statistics = () => {
   const myData = useLoaderData();
@@ -11,12 +10,19 @@ const Statistics = () => {
     const localObj = getLocalStoredObj();
     setStoredArray(localObj);
   }, [myData]);
-  const totalDonation = myData.length;
-  const myDonation = storedArray.length;
+  const storedDonations = [];
+  for (const id of storedArray) {
+    const target = myData.find((i) => parseInt(i.id) === parseInt(id));
+    if (target) {
+      storedDonations.push(target);
+    }
+  }
+  const totalDonation = myData.reduce((a, b) => a + parseInt(b.price), 0);
+  const myDonation = storedDonations.reduce((a, b) => a + parseInt(b.price), 0);
 
   const data = [
-    { name: "Group A", value: totalDonation },
-    { name: "Group B", value: myDonation },
+    { name: "Total Donation", value: totalDonation },
+    { name: "Your Donation", value: myDonation },
   ];
   const COLORS = ["#FF444A", "#00C49F"];
   const RADIAN = Math.PI / 180;
@@ -44,6 +50,20 @@ const Statistics = () => {
       </text>
     );
   };
+  const CustomTooltip = ({ lable, active, payload }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <p
+            className="bg-white px-3
+           py-1 rounded-md font-semibold"
+          >{`$${payload[0].value}`}</p>
+        </div>
+      );
+    }
+
+    return null;
+  };
   return (
     <div className="">
       <div className="flex items-center justify-center w-1/2 mx-auto mt-10 md:mt-0">
@@ -65,6 +85,7 @@ const Statistics = () => {
               />
             ))}
           </Pie>
+          <Tooltip content={<CustomTooltip />} />
         </PieChart>
       </div>
       <div className="flex gap-5 md:gap-10 justify-center mt-10">
